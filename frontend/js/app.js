@@ -18,9 +18,10 @@ const state = {
     audioContext: null,
     analyser: null,
     microphone: null,
-    voiceName: 'Rachel',
-    serverUrl: 'http://localhost:8000',
+    voiceName: 'Sarah',
+    serverUrl: window.location.origin,
     theme: 'dark'
+
 };
 
 // ===== DOM Elements =====
