@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: call-agent
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        value: https://integrate.api.nvidia.com/v1
+      - key: OPENAI_MODEL
+        value: meta/llama-3.3-70b-instruct
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: STT_API_KEY
+        sync: false
+      - key: STT_BASE_URL
+        value: https://api.openai.com/v1
+      - key: STT_MODEL
+        value: whisper-1
+      - key: DATABASE_PATH
+        value: /data/call_logs.db
+      - key: DEBUG
+        value: "false"
+
+disk:
+  name: call-data
+  mountPath: /data
+  sizeGB: 1
