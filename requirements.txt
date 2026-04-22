@@ -1,0 +1,14 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+python-dotenv==1.0.0
+openai==1.12.0
+elevenlabs==0.2.27
+speechrecognition==3.10.1
+numpy==1.24.3
+scipy==1.10.1
+scikit-learn==1.2.2
+joblib==1.2.0
+aiofiles==23.2.1
+httpx==0.26.0
+vaderSentiment==3.3.2
